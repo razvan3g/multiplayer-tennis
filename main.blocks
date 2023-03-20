@@ -1,0 +1,587 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="H_h9ci:nm3*qe=kR[aH3">Player</variable><variable type="KIND_SpriteKind" id="uiv5u%kySgFCzg*6~58V">Projectile</variable><variable type="KIND_SpriteKind" id="DvOz{5G4bR=H?7(4jmp~">Food</variable><variable type="KIND_SpriteKind" id="}^CY[{{CyQ-(:bXjbeH!">Enemy</variable><variable type="KIND_SpriteKind" id="Qs{gy-Rm`NW-(k)M.~ue">Paleta</variable><variable type="KIND_SpriteKind" id="l;0~z[eFx+kCWorHje(s">MiniMenu</variable><variable id="eSXS5lW]-8F[]C;a%)+{">myMenu</variable><variable id="W1?-#;}iC@vD.326`gt]">menuForRakets</variable><variable id="?g!]wu@N??)).w:@WY-A">mySprite</variable></variables><block type="pxt-on-start" id="7RYB1y5N5W[-;_-(2JzA" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="F_+~7M~YP$!^S4w{,[hB"><field name="VAR" id="eSXS5lW]-8F[]C;a%)+{">myMenu</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="mini_menu_show_menu" id="5#H)y-URlM#vSG1++5!i"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="item1"><shadow type="mini_menu_create_menu_item" id="e5]yk]pJ;B5x!7_:UJj!"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="{3HJOj1;w7K!TL_(D29*"><field name="TEXT">Play game</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="Jo?dDGl5?i@*))8vbX?s"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"Jo?dDGl5?i@*))8vbX?s"}}</data></shadow></value></shadow></value><value name="item2"><shadow type="mini_menu_create_menu_item" id="mY;c$_hDP9dt)MA%F!@g"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="Pv}]^vbYr9-nf+Z(;V:a"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="?+^2as0rHLB:foD5F:b#"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"?+^2as0rHLB:foD5F:b#"}}</data></shadow></value></shadow></value><value name="item3"><shadow type="mini_menu_create_menu_item" id="oeG?tw?+S;NJ2to@(b0e"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="H#MQwpTOD8Z.lLmk#7~$"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="GvX[J_]d?;vq2=j2,mam"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"GvX[J_]d?;vq2=j2,mam"}}</data></shadow></value></shadow></value><value name="item4"><shadow type="mini_menu_create_menu_item" id="eTxN7#PzGEPZm$`{soQj"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="ZO,3B*kjVxONMli1+ooE"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="7:Cuo$@E@*F63lapYQIT"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"7:Cuo$@E@*F63lapYQIT"}}</data></shadow></value></shadow></value><value name="item5"><shadow type="mini_menu_create_menu_item" id="B;,42HN,5{UnIB^GKFj("><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="U^HBPCvG9u)q;n=16y]I"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="sWipJwZ.:@=h;^Wf`avP"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"sWipJwZ.:@=h;^Wf`avP"}}</data></shadow></value></shadow></value><value name="item6"><shadow type="mini_menu_create_menu_item" id="RCN#NIkgLOhK}pAl]Yml"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="8FIY11#gYCm?lHUk_gDA"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="-~jio6DrV/GC7x%K1vG{"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"-~jio6DrV/GC7x%K1vG{"}}</data></shadow></value></shadow></value><value name="item7"><shadow type="mini_menu_create_menu_item" id="lxXO`TE}8^cVkI?9Ggbd"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="87W007@sK[pR5#A|aPCH"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="lA[os;DVCMSE0cCKWl:D"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"lA[os;DVCMSE0cCKWl:D"}}</data></shadow></value></shadow></value><value name="item8"><shadow type="mini_menu_create_menu_item" id="U0=H!|r0nm5~I]59KzT;"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="7A@sn9Ux.QJ*}sF0G_8t"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id=",rGsDA[4#*h/rTyN`4)#"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":",rGsDA[4#*h/rTyN`4)#"}}</data></shadow></value></shadow></value><value name="item9"><shadow type="mini_menu_create_menu_item" id="h?Jj4B?-RFaR8cLOQ]rE"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="{EK$R[+E0LV]d;y#SaY{"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="8/5ADnYHRTw[-BRgF.,$"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"8/5ADnYHRTw[-BRgF.,$"}}</data></shadow></value></shadow></value><value name="item10"><shadow type="mini_menu_create_menu_item" id="`dW2U$#~j{sUce|e#)W0"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="h~TWs)zNYoeqK.0NKN6f"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="d:zO!tK5CRU;i_4OGX/*"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"d:zO!tK5CRU;i_4OGX/*"}}</data></shadow></value></shadow></value><value name="item11"><shadow type="mini_menu_create_menu_item" id="cofWA![7ou[}}+=tgoEX"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="=Cq+?NC3y{LWTg$gT*Ci"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id=")8N|.HlG_c/y0CCKg7lH"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":")8N|.HlG_c/y0CCKg7lH"}}</data></shadow></value></shadow></value><value name="item12"><shadow type="mini_menu_create_menu_item" id="Q;@_htR/K}NpWqWY|{TI"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="6S8dQFPevcg]AK=stRl0"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="R/|SLLQ1|60}.)NU=:?h"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"R/|SLLQ1|60}.)NU=:?h"}}</data></shadow></value></shadow></value></block></value></block></statement></block><block type="keyonevent" id="o~$M]Vrv?eE5wESs)zWy" x="380" y="260"><field name="button">controller.anyButton</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="mini_menu_on_button_pressed" id="-Eq%YLC::m2?j^cVfrZD"><field name="button">controller.A</field><value name="this"><block type="variables_get" id="A;q)jjzw4dGK.vfPu[iw"><field name="VAR" id="eSXS5lW]-8F[]C;a%)+{">myMenu</field></block></value><value name="HANDLER_DRAG_PARAM_selection"><shadow type="argument_reporter_string" id="kup~AfxOUZ+dvw!F#9yP"><field name="VALUE">selection</field></shadow></value><value name="HANDLER_DRAG_PARAM_selectedIndex"><shadow type="argument_reporter_number" id="Eu|J*~PS@{Ea`O#r3=VP"><field name="VALUE">selectedIndex</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="!H`*#OUs=6wt8^L7_I-e"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="{#U4hTgx|kUO~s9a9Y^0"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_string" id=".ckLe|=(%?3Q=CjHGW?q"><field name="VALUE">selection</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="?WqQftCEW___e6bwS2@n"><field name="TEXT">Play game</field></block></value></block></value><statement name="DO0"><block type="mini_menu_sprite_close_menu" id="{ae(B+=`k7BoxFa.Vm#8"><value name="this"><block type="variables_get" id="u2*^m={X0GWKr!H%Z.(S"><field name="VAR" id="eSXS5lW]-8F[]C;a%)+{">myMenu</field></block></value><next><block type="variables_set" id="GSeiw!C__GO%@lox(bl;"><field name="VAR" id="W1?-#;}iC@vD.326`gt]">menuForRakets</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="mini_menu_show_menu" id="^9RF*h!Ul%0j]#fYa#V6"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="item1"><shadow type="mini_menu_create_menu_item" id="`]ojHok0|?;}Uj,Wr]0a"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="text"><shadow type="text" id="V7;q+V^MJw]AdQJ3OUU3"><field name="TEXT">Paleta verde</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="p(XGYrdUT$E!~,Zd;7;!"><field name="img">img`
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+`</field><data>{"commentRefs":[],"fieldData":{"img":"p(XGYrdUT$E!~,Zd;7;!"}}</data></shadow></value></shadow></value><value name="item2"><shadow type="mini_menu_create_menu_item" id="]ahzak|o,]R;W5?_*5LP"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="X53xNH/{lUQ:VVeD#*_("><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id=",IX$mJmy=Lz_eISY`fj8"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":",IX$mJmy=Lz_eISY`fj8"}}</data></shadow></value></shadow></value><value name="item3"><shadow type="mini_menu_create_menu_item" id="^*WTYZHolV{W.!y6q2zh"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="Pswc=rx0Mj~[6-;E:g.U"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="H/jD.Yi?ur$v,pS$vfUj"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"H/jD.Yi?ur$v,pS$vfUj"}}</data></shadow></value></shadow></value><value name="item4"><shadow type="mini_menu_create_menu_item" id="+EytjELK7sIh||/aIlu6"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="39[c,?c(1)@kzt$L=A9J"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="977rj#WeBu+5_;^!xIfR"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"977rj#WeBu+5_;^!xIfR"}}</data></shadow></value></shadow></value><value name="item5"><shadow type="mini_menu_create_menu_item" id="`L$5F2%6}!4t2x_.5u+="><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id=")RYh1I$8}}~!xiH,;5m?"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="?B!`W.f$#le.u!{5h.+n"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"?B!`W.f$#le.u!{5h.+n"}}</data></shadow></value></shadow></value><value name="item6"><shadow type="mini_menu_create_menu_item" id="FFXnOF;ca.aH88h+_r1b"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="WpLTJ(#!k6uX4o(o5kcT"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="R]]TW%1s_DG|t9#Js.@s"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"R]]TW%1s_DG|t9#Js.@s"}}</data></shadow></value></shadow></value><value name="item7"><shadow type="mini_menu_create_menu_item" id="7*3VBVphuLp}hyj{bWww"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="{feVC3;=*_T+O1|lz`~%"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id=",vh-(dG:IXK.!-(m.Se("><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":",vh-(dG:IXK.!-(m.Se("}}</data></shadow></value></shadow></value><value name="item8"><shadow type="mini_menu_create_menu_item" id="G{5G,8;v)$jy{3dYLo#H"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="$x(xQ6Cp:Se-5z;2h_?o"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id=",Z)[KQRHPg3I__21jX]`"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":",Z)[KQRHPg3I__21jX]`"}}</data></shadow></value></shadow></value><value name="item9"><shadow type="mini_menu_create_menu_item" id="-s^Lw^yO)r]HmV511cF2"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="Xp67j%Uky.gfm{X0PfxK"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="q:o@i.rD@sq2=5Ukd$m*"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"q:o@i.rD@sq2=5Ukd$m*"}}</data></shadow></value></shadow></value><value name="item10"><shadow type="mini_menu_create_menu_item" id="Hg,25+XTEO%(T=ogfbnn"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="wuM)dkzFZRY#1[$=OWI."><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="`8+,.y8`4R[iF%}8kB#|"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"`8+,.y8`4R[iF%}8kB#|"}}</data></shadow></value></shadow></value><value name="item11"><shadow type="mini_menu_create_menu_item" id="h.vH!aHP8=(1GD*l~M^^"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="^P#Z2[F7sH9*oMbV`*(h"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="fB{qH6+vNrxlR(k0)=j9"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"fB{qH6+vNrxlR(k0)=j9"}}</data></shadow></value></shadow></value><value name="item12"><shadow type="mini_menu_create_menu_item" id="|@5aZS;_.Va}qFycp_8w"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="text"><shadow type="text" id="xPQ?{X.|ujt*7Mvh|(!9"><field name="TEXT">abc</field></shadow></value><value name="image"><shadow type="screen_image_picker" id="LhQLwe8[5moe#(jfdE1!"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"LhQLwe8[5moe#(jfdE1!"}}</data></shadow></value></shadow></value></block></value><next><block type="mini_menu_on_button_pressed" id="bibBgRUMOK#27zo(2LXN"><field name="button">controller.A</field><value name="this"><block type="variables_get" id="DhP+o*Nwst~m@]Ak*X2^"><field name="VAR" id="W1?-#;}iC@vD.326`gt]">menuForRakets</field></block></value><value name="HANDLER_DRAG_PARAM_selection"><shadow type="argument_reporter_string" id="#YN+](FPU.vDf@NpJJ[_"><field name="VALUE">selection</field></shadow></value><value name="HANDLER_DRAG_PARAM_selectedIndex"><shadow type="argument_reporter_number" id="c.*Sl-S9$dLb^C_d%Dwu"><field name="VALUE">selectedIndex</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="6EU3ubFht1p[B*WW:Nd3"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="M`*nQUk)wj$ZH4MBbs/F"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_string" id="u,{K!:Ua5u4N:tz[?pU)"><field name="VALUE">selection</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="Za,U;x`t43Nn7/B%0Q7:"><field name="TEXT">Paleta verde</field></block></value></block></value><statement name="DO0"><block type="mini_menu_sprite_close_menu" id="6$(c,ABP;f#vVH5]o3bi"><value name="this"><block type="variables_get" id="9#$@#MHQD2=JnD;(~|,?"><field name="VAR" id="W1?-#;}iC@vD.326`gt]">menuForRakets</field></block></value><next><block type="function_call" id=".KQ5V]fU,GE|LGZe0bH}"><mutation name="initPaletaVerde" functionid="m7WpD-!,vDVIB@|Uvd{R"></mutation><next><block type="function_call" id=";Oyi]?{Rd!tjnd3GJ77f"><mutation name="initTileMap" functionid=":vusLksvg97}HC(,VmV8"></mutation></block></next></block></next></block></statement></block></statement></block></next></block></next></block></statement></block></statement></block></statement></block><block type="function_definition" id="Ip~_BWoZ0W8y!K+L?h0Z" x="-260" y="420"><mutation name="initTileMap" functionid=":vusLksvg97}HC(,VmV8"></mutation><field name="function_name">initTileMap</field><statement name="STACK"><block type="gamesetbackgroundimage" id="T_sGhIqliHmEySS8uXS1"><value name="img"><shadow type="background_image_picker" id="^kxx)x2x){sT9kNVm,:S"><field name="img">img`
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+fffff22222...............................................................ddddd........................................................................44444fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+`</field><data>{"commentRefs":[],"fieldData":{"img":"^kxx)x2x){sT9kNVm,:S"}}</data></shadow></value></block></statement></block><block type="function_definition" id=";ZxXS*_:P3Iik5j5BMX=" x="-460" y="600"><mutation name="initPaletaVerde" functionid="m7WpD-!,vDVIB@|Uvd{R"></mutation><field name="function_name">initPaletaVerde</field><statement name="STACK"><block type="mp_setPlayerSprite" id="Ell|8!n6R(NMJ}jB(9N6"><value name="player"><shadow type="mp_playerSelector" id="DY3T+}}M1W:NA0J`X^:+"><field name="number">mp.PlayerNumber.One</field></shadow></value><value name="sprite"><shadow type="spritescreate" id="Ecwp)vBo{N^g)gq{^n/Y"><value name="img"><shadow type="screen_image_picker" id="iC[L3CV[TP*DiAoMnh{h"><field name="img">img`
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+`</field><data>{"commentRefs":[],"fieldData":{"img":"iC[L3CV[TP*DiAoMnh{h"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="A1aC=EpRqG~+]@ll3Fjh"><field name="MEMBER">Paleta</field></shadow></value></shadow></value><next><block type="mp_moveWithButtons" id="2qPkwB|hR-icThz#@Wqg"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="player"><shadow type="mp_playerSelector" id="F[^!e$NpE%9g!t9v2lz["><field name="number">mp.PlayerNumber.One</field></shadow></value><value name="vx"><shadow type="spriteSpeedPicker" id="|q,Q+ecM!+72WB(TJ|t-"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="jRQV%dRr$#!:N1g$JTEq"><field name="speed">150</field></shadow></value><next><block type="spritesetsetstayinscreen" id="(p.3deDBqN3zD*}%qolJ"><value name="sprite"><block type="mp_getPlayerSprite" id=",ipT~*DMOh@cbVq-H/O0"><value name="player"><shadow type="mp_playerSelector" id="Wa3y[Mv^snHA6/Es#bS_"><field name="number">mp.PlayerNumber.One</field></shadow></value></block></value><value name="on"><shadow type="toggleOnOff" id="X-9t@.)P%Bx]!4*s9j8)"><field name="on">true</field></shadow></value></block></next></block></next></block></statement></block></xml>
