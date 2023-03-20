@@ -1,60 +1,6 @@
 namespace SpriteKind {
     export const Paleta = SpriteKind.create()
 }
-controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
-    myMenu.onButtonPressed(controller.A, function (selection, selectedIndex) {
-        if (selection == "Play game") {
-            myMenu.close()
-            menuForRakets = miniMenu.createMenu(
-            miniMenu.createMenuItem("Paleta verde", img`
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                7777777777777777
-                `)
-            )
-            menuForRakets.onButtonPressed(controller.A, function (selection, selectedIndex) {
-                if (selection == "Paleta verde") {
-                    menuForRakets.close()
-                    initPaletaVerde()
-                    initTileMap()
-                }
-            })
-        }
-    })
-})
 function initPaletaVerde () {
     mp.setPlayerSprite(mp.playerSelector(mp.PlayerNumber.One), sprites.create(img`
         7777777777777777
@@ -96,6 +42,7 @@ function initPaletaVerde () {
         `, SpriteKind.Paleta))
     mp.moveWithButtons(mp.playerSelector(mp.PlayerNumber.One), 0, 150)
     mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).setStayInScreen(true)
+    mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).setPosition(6, 55)
 }
 function initTileMap () {
     scene.setBackgroundImage(img`
@@ -221,8 +168,32 @@ function initTileMap () {
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         `)
 }
-let menuForRakets: miniMenu.MenuSprite = null
-let myMenu: miniMenu.MenuSprite = null
-myMenu = miniMenu.createMenu(
-miniMenu.createMenuItem("Play game")
-)
+function initMinge () {
+    minge = sprites.create(img`
+        .....888888888......
+        ...8888888888888....
+        ..888888888888888...
+        .88888888888888888..
+        .88888888888888888..
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        8888888888888888888.
+        .88888888888888888..
+        .88888888888888888..
+        ..888888888888888...
+        ...8888888888888....
+        .....888888888......
+        ....................
+        `, SpriteKind.Player)
+    tiles.placeOnTile(minge, tiles.getTileLocation(73, 58))
+}
+let minge: Sprite = null
+initTileMap()
+initPaletaVerde()
+initMinge()
