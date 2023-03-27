@@ -1,7 +1,77 @@
 namespace SpriteKind {
     export const Paleta = SpriteKind.create()
+    export const Minge = SpriteKind.create()
+    export const Paleta_2 = SpriteKind.create()
+    export const Outside = SpriteKind.create()
 }
-function initPaletaVerde () {
+sprites.onOverlap(SpriteKind.Minge, SpriteKind.Player, function (sprite, otherSprite) {
+    if (game.runtime() - colision >= 750) {
+        minge.setVelocity(sprite.vx * -1, randint(15, -15))
+        colision = game.runtime()
+        if (minge.isHittingTile(CollisionDirection.Right)) {
+        	
+        }
+        if (mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Two)) == otherSprite) {
+            console.log("Blue" + "- hit!!")
+        } else {
+            console.log("Red" + "- hit!!")
+        }
+    }
+})
+sprites.onOverlap(SpriteKind.Minge, SpriteKind.Outside, function (sprite, otherSprite) {
+    console.log("hit")
+    if (otherSprite.x > 80) {
+        info.player1.changeScoreBy(1)
+    } else {
+        info.player2.changeScoreBy(1)
+    }
+})
+function initPlayer2 () {
+    console.log("initPlayer2")
+    mp.setPlayerSprite(mp.playerSelector(mp.PlayerNumber.Two), sprites.create(img`
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        8888888888888888
+        `, SpriteKind.Player))
+    mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Two)).setPosition(152, 52)
+    mp.moveWithButtons(mp.playerSelector(mp.PlayerNumber.Two), 0, 150)
+    mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Two)).setStayInScreen(true)
+}
+function initPlayer1 () {
+    console.log("initPlayer1")
     mp.setPlayerSprite(mp.playerSelector(mp.PlayerNumber.One), sprites.create(img`
         7777777777777777
         7777777777777777
@@ -39,12 +109,44 @@ function initPaletaVerde () {
         7777777777777777
         7777777777777777
         7777777777777777
-        `, SpriteKind.Paleta))
+        `, SpriteKind.Player))
     mp.moveWithButtons(mp.playerSelector(mp.PlayerNumber.One), 0, 150)
     mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).setStayInScreen(true)
     mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).setPosition(6, 55)
 }
-function initTileMap () {
+function initMinge () {
+    minge = sprites.create(img`
+        .....555555555......
+        ...5555555555555....
+        ..555555555555555...
+        .55555555555555555..
+        .55555555555555555..
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        5555555555555555555.
+        .55555555555555555..
+        .55555555555555555..
+        ..555555555555555...
+        ...5555555555555....
+        .....555555555......
+        ....................
+        `, SpriteKind.Minge)
+    tiles.placeOnTile(minge, tiles.getTileLocation(75, 61))
+    minge.setStayInScreen(true)
+    minge.setBounceOnWall(true)
+    if (randint(1, 2) == 1) {
+        minge.setVelocity(randint(-80, -100), randint(45, -45))
+    } else {
+        minge.setVelocity(randint(80, 100), randint(45, -45))
+    }
+}
+function initTilemap () {
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -168,32 +270,262 @@ function initTileMap () {
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         `)
 }
-function initMinge () {
-    minge = sprites.create(img`
-        .....888888888......
-        ...8888888888888....
-        ..888888888888888...
-        .88888888888888888..
-        .88888888888888888..
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        8888888888888888888.
-        .88888888888888888..
-        .88888888888888888..
-        ..888888888888888...
-        ...8888888888888....
-        .....888888888......
-        ....................
-        `, SpriteKind.Player)
-    tiles.placeOnTile(minge, tiles.getTileLocation(73, 58))
-}
+mp.onControllerEvent(ControllerEvent.Connected, function (player2) {
+    if (mp.isConnected(mp.playerSelector(mp.PlayerNumber.Two))) {
+        initPlayer2()
+    }
+})
 let minge: Sprite = null
-initTileMap()
-initPaletaVerde()
+let colision = 0
+info.player2.setScore(0)
+info.player1.setScore(0)
+initTilemap()
+let dunga = sprites.create(img`
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    2 
+    `, SpriteKind.Outside)
+dunga.setPosition(4, 60)
+dunga = sprites.create(img`
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    8 
+    `, SpriteKind.Outside)
+dunga.setPosition(156, 60)
+initPlayer1()
 initMinge()
+colision = game.runtime()
